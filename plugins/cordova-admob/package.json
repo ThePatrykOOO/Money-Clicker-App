@@ -1,0 +1,116 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-admob",
+        "scope": null,
+        "escapedName": "cordova-admob",
+        "name": "cordova-admob",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\xampp\\htdocs\\MoneyClicker\\node_modules"
+    ]
+  ],
+  "_from": "cordova-admob@latest",
+  "_id": "cordova-admob@4.1.16",
+  "_inCache": true,
+  "_location": "/cordova-admob",
+  "_nodeVersion": "4.4.2",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/cordova-admob-4.1.16.tgz_1477733287428_0.49909365572966635"
+  },
+  "_npmUser": {
+    "name": "appfeel",
+    "email": "info@appfeel.com"
+  },
+  "_npmVersion": "3.10.7",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-admob",
+    "scope": null,
+    "escapedName": "cordova-admob",
+    "name": "cordova-admob",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-admob/-/cordova-admob-4.1.16.tgz",
+  "_shasum": "a2c1d9516518d157660524cb9d5549a3ee046d97",
+  "_shrinkwrap": null,
+  "_spec": "cordova-admob",
+  "_where": "C:\\xampp\\htdocs\\MoneyClicker\\node_modules",
+  "author": {
+    "name": "AppFeel"
+  },
+  "bugs": {
+    "url": "https://github.com/appfeel/admob-google-cordova/issues"
+  },
+  "cordova": {
+    "id": "cordova-admob",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "dependencies": {},
+  "description": "Google AdMob Ads plugin for Cordova, Phonegap, Ionic/Angular and Intel XDK. Monetize your app with one javascript line. Android SDK v7.5, iOS SDK v7.3.1. With support for tappx and auto-detect internet connection.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "a2c1d9516518d157660524cb9d5549a3ee046d97",
+    "tarball": "https://registry.npmjs.org/cordova-admob/-/cordova-admob-4.1.16.tgz"
+  },
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=4.0.0"
+    }
+  ],
+  "gitHead": "d0c2ee406d987494fa76eb2880ba65d90f4b2fbb",
+  "homepage": "https://github.com/appfeel/admob-google-cordova#readme",
+  "keywords": [
+    "ad",
+    "ads",
+    "admob",
+    "google",
+    "advertising",
+    "advertisment",
+    "publicity",
+    "earn",
+    "win",
+    "play",
+    "services",
+    "iad",
+    "flurry",
+    "monetization",
+    "money",
+    "appfeel",
+    "tappx",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "appfeel",
+      "email": "info@appfeel.com"
+    }
+  ],
+  "name": "cordova-admob",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/appfeel/admob-google-cordova.git"
+  },
+  "scripts": {},
+  "version": "4.1.16"
+}

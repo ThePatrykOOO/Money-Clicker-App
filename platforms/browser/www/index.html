@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Money Clicker</title>
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="font/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/my-app.css">
+  </head>
+  <body>
+    <div class="views tabs toolbar-through">
+      <!--Main -->
+      <div id="index" class="view view-main tab active">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="center sliding">Money Clicker - Home</div>
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-1" class="page">
+            <div class="page-content">
+              <div class="content-block">
+                <a class="button button-big button-round" id="clickerBtn">Click</a>
+              </div>
+              <div class="content-block-title">
+                <p>Cash: <span id="cash"></span>$</p>
+                <p>Per Click: <span id="perClick"></span>$</p>
+              </div>
+              <a class="button button-round" id="receiveProfit">Receive Profit <span id="myProfit"></span>$</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--SHOP-->
+      <div id="shop" class="view tab">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="center sliding">Money Clicker - Shop</div>
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-2" class="page">
+            <div class="page-content">
+              <div class="content-block">
+                <p>You can buy builings, upgrade click and more...</p>
+              </div>
+              <div class="list-block">
+                <button class="button button-fill color-green upgradeClick" id="upgradeClick"></button>
+                <ul id="shopItem"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Earn More-->
+      <div id="earnmore" class="view tab">
+        <div class="pages navbar-through">
+          <div data-page="index-3" class="page">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="center">Money Clicker - Earn More</div>
+              </div>
+            </div>
+            <div class="page-content">
+              <div class="content-block">
+                <p>Watch Ad, You can receive some money :)</p>
+                <button id="showBtn">ShowAd</button>
+                <div class="adBlock"></div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Settings-->
+      <div id="settings" class="view tab">
+        <div class="pages navbar-fixed">
+          <div data-page="index-4" class="page">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="center">Money Clicker - Settings</div>
+              </div>
+            </div>
+            <div class="page-content">
+              <div class="list-block">
+                <ul>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon fa fa-user"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title label">Name</div>
+                        <div class="item-input">
+                          <input type="text" id="setName">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon fa fa-music"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title label">Sound</div>
+                        <div class="item-input">
+                          <label class="label-switch">
+                            <input type="checkbox" id="setSound" checked="checked">
+                            <div class="checkbox"></div>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <a class="button button-big color-green" id="save">Save</a>
+                <div class="content-block-title">Your feedback :)</div>
+                <div class="list-block">
+                  <ul>
+                    <li class="align-top">
+                      <div class="item-content">
+                          <div class="item-input">
+                            <textarea id="feedback" placeholder="What do you think about this application. Write something and help me improve this App, please :)"></textarea>
+                          </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <a class="button button-big color-green">Send</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Statistic-->
+      <div id="statistic" class="view tab">
+        <div class="pages navbar-fixed">
+          <div data-page="index-4" class="page">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="center">Money Clicker - Statistic</div>
+              </div>
+            </div>
+            <div class="page-content">
+              <div class="content-block">
+                <h4>Your Profil</h4>
+                <div class="list-block">
+                  <ul>
+                    <li>
+                      <div class="item-inner">
+                        <div class="item-title">Your Name: </div>
+                        <div class="item-after" id="nameProfil"></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-inner">
+                        <div class="item-title">Cash: </div>
+                        <div class="item-after"><span id="cashProfil"></span>$</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-inner">
+                        <div class="item-title">Level: </div>
+                        <div class="item-after" id="lvlProfil"></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-inner">
+                        <div class="item-title">Per Click: </div>
+                        <div class="item-after"><span id="perClickProfil"></span>$</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-inner">
+                        <div class="item-title">All click: </div>
+                        <div class="item-after" id="allClickProfil"></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <h4>Count Items</h4>
+                <div class="list-block">
+                  <ul>
+                    <li>
+                      <div class="item-inner">
+                        <div class="item-title">Count Mobile Games: </div>
+                        <div class="item-after" id="countMobileGames"></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-inner">
+                        <div class="item-title">Count Webistes: </div>
+                        <div class="item-after" id="countWebsite"></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-inner">
+                        <div class="item-title">Count Cars: </div>
+                        <div class="item-after" id="countCars"></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-inner">
+                        <div class="item-title">Count Garages: </div>
+                        <div class="item-after" id="countGarage"></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-inner">
+                        <div class="item-title">Count Bakers: </div>
+                        <div class="item-after" id="countBakers"></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-inner">
+                        <div class="item-title">Count Restaurants: </div>
+                        <div class="item-after" id="countRestaurant"></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-inner">
+                        <div class="item-title">Count Flats: </div>
+                        <div class="item-after" id="countFlat"></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-inner">
+                        <div class="item-title">Count Villas: </div>
+                        <div class="item-after" id="countVilla"></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-inner">
+                        <div class="item-title">Count Factories: </div>
+                        <div class="item-after" id="countFactory"></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-inner">
+                        <div class="item-title">Count Banks: </div>
+                        <div class="item-after" id="countBank"></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="item-inner">
+                        <div class="item-title">Count Shopping Centers: </div>
+                        <div class="item-after" id="countMall"></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Bottom Tabbar-->
+      <div class="toolbar tabbar tabbar-labels">
+        <div class="toolbar-inner">
+          <a href="#index" class="tab-link active"> <i class="icon fa fa-home fa-2x"></i><span class="tabbar-label">Home</span></a>
+          <a href="#shop" class="tab-link"> <i class="icon fa fa-shopping-cart fa-2x"></i><span class="tabbar-label">Shop</span></a>
+          <a href="#earnmore" class="tab-link"><i class="icon fa fa-money fa-2x"></i><span class="tabbar-label">Earn More</span></a>
+          <a href="#settings" class="tab-link"><i class="icon fa fa-cog fa-2x"></i><span class="tabbar-label">Settings</span></a>
+          <a href="#statistic" class="tab-link"> <i class="icon fa fa-line-chart fa-2x"></i><span class="tabbar-label">Statistic</span></a>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+    <script type="text/javascript" src="js/sql.js"></script>
+  </body>
+</html>

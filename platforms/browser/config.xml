@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.phonegap.moneyClicker" version="0.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="Device">
+        <param name="browser-package" value="Device" />
+    </feature>
+    <name>MoneyClicker</name>
+    <description>
+        Click, earn and build. Play for free on the Android.
+    </description>
+    <author email="pfilipiak00@gmail.com" href="patrykfilipiak.pl">
+        Patryk Filipiak
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <preference name="DisallowOverscroll" value="true" />
+</widget>

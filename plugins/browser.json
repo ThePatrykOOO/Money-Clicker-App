@@ -1,0 +1,43 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "com.purplebrain.adbuddiz.sdk": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-ad-admob": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "admob": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "com.admob.plugin": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-admob": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-connectivity-monitor": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        }
+    }
+}

@@ -1,0 +1,120 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"connectivity\"><param name=\"android-package\" value=\"com.appfeel.cordova.connectivity.Connectivity\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AdMobAds\"><param name=\"android-package\" value=\"com.appfeel.cordova.admob.AdMobAds\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"StatusBar\"><param name=\"android-package\" value=\"org.apache.cordova.statusbar.StatusBar\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+                            "count": 2
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                            "count": 2
+                        }
+                    ],
+                    "/manifest/application": [
+                        {
+                            "xml": "<activity android:configChanges=\"keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize\" android:name=\"com.google.android.gms.ads.AdActivity\" android:theme=\"@android:style/Theme.Translucent\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-connectivity-monitor": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-admob": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "id": "cordova-connectivity-monitor.connectivity",
+            "file": "plugins/cordova-connectivity-monitor/www/connectivity.js",
+            "pluginId": "cordova-connectivity-monitor",
+            "clobbers": [
+                "window.connectivity"
+            ]
+        },
+        {
+            "id": "cordova-admob.AdMobAds",
+            "file": "plugins/cordova-admob/www/admob.js",
+            "pluginId": "cordova-admob",
+            "clobbers": [
+                "window.admob",
+                "window.tappx"
+            ]
+        },
+        {
+            "id": "cordova-plugin-device.device",
+            "file": "plugins/cordova-plugin-device/www/device.js",
+            "pluginId": "cordova-plugin-device",
+            "clobbers": [
+                "device"
+            ]
+        },
+        {
+            "id": "cordova-plugin-statusbar.statusbar",
+            "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
+            "pluginId": "cordova-plugin-statusbar",
+            "clobbers": [
+                "window.StatusBar"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-connectivity-monitor": "1.2.2",
+        "cordova-admob": "4.1.16",
+        "cordova-plugin-console": "1.0.7",
+        "cordova-plugin-device": "1.1.6",
+        "cordova-plugin-statusbar": "1.0.1",
+        "cordova-plugin-whitelist": "1.2.2"
+    }
+}
