@@ -237,9 +237,10 @@ $$('body').on('click','.btnBuy', function () {
                 var actualMoney = Mycash - price;
                 $$('#cash').text(actualMoney);
                 $$('#cashProfil').text(actualMoney);
+                var actualMoney = (Math.round(actualMoney * 100)) / 100;
                 tx.executeSql('UPDATE user SET cash=? WHERE id=?', [actualMoney,1]);
                 setCountItem(nameProduct);
-                alert("You buy "+name+". You are earning "+ profit +"$ per minute")
+                alert("You buy "+nameProduct+". You are earning "+ profit +"$ per minute")
             } else {
                 alert("You have not enough money to buy this item");
             }
@@ -255,12 +256,6 @@ $$('body').on('click','.btnBuy', function () {
 //Settings
 $$('#save').click(function () {
     db.transaction(function (tx) {
-        var sound = "";
-        if($$('#setSound').prop('checked') == true){
-            sound = "true";
-        } else {
-            sound = "false";
-        }
         var name = $$('#setName').val();
         if (name.length === 0 || name === '' || typeof name === 'undefined') {
             alert("Your name doesn't change");
@@ -268,7 +263,19 @@ $$('#save').click(function () {
         }
         $$('#setName').attr("value",name);
         $$('#nameProfil').text(name);
-        tx.executeSql('UPDATE user SET sound_set=?, name=? WHERE id=?', [sound,name,1]);
+        tx.executeSql('UPDATE user SET name=? WHERE id=?', [name,1]);
+        soundBg();
+    });
+});
+$$('#setSound').change(function () {
+    db.transaction(function (tx) {
+        var sound = "";
+        if($$('#setSound').prop('checked') == true){
+            sound = "true";
+        } else {
+            sound = "false";
+        }
+        tx.executeSql('UPDATE user SET sound_set=? WHERE id=?', [sound,1]);
         soundBg();
     });
 });

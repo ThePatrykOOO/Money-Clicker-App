@@ -18,6 +18,9 @@
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-admob-simple": {
+            "PACKAGE_NAME": "com.phonegap.moneyClicker"
         }
     },
     "dependent_plugins": {
@@ -26,6 +29,9 @@
         },
         "cordova-plugin-device": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-admob-sdklibs": {
+            "PACKAGE_NAME": "com.phonegap.moneyClicker"
         }
     }
 }

@@ -14,43 +14,6 @@ var statistic = myApp.addView('#statistic');
 function dd(sth) {
     console.log(sth);
 }
-
-function onDeviceReady() {
-    document.removeEventListener('deviceready', onDeviceReady, false);
-
-    admob.setOptions({
-        publisherId:  'ca-app-pub-2180349011866134~9196488206',
-        interstitial: 'ca-app-pub-2180349011866134/2172749007',
-    });
-
-    document.addEventListener(admob.events.onAdLoaded, onAdLoadedEvent);
-    prepareIntestitialAd();
-}
-
-document.addEventListener("deviceready", onDeviceReady, false);
-
-function showInterstitialAd() {
-    if (isPendingInterstitial) {
-        // my-app.js:38 Uncaught ReferenceError: admob is not defined
-        admob.showInterstitialAd(function () {
-            isPendingInterstitial = false;
-            isAutoshowInterstitial = false;
-            prepareInterstitialAd();
-        });
-    } else {
-        // The interstitial is not prepared, so in this case, we want to show the interstitial as soon as possible
-        // my-app.js:46 Uncaught ReferenceError: admob is not defined
-        isAutoshowInterstitial = true;
-        admob.requestInterstitialAd({
-            autoShowInterstitial: isAutoshowInterstitial
-        });
-    }
-}
-$$('#showBtn').click(function () {
-    $$('.adBlock').html(setInterval(showInterstitialAd, 100));
-
-});
-
 function setCountItem(nameProduct) {
     if (nameProduct === "Mobile Games") {
         db.transaction(function (tx) {
@@ -185,13 +148,16 @@ function soundBg() {
     db.transaction(function (tx) {
         tx.executeSql('SELECT sound_set FROM user WHERE id=1', [], function (tx, results) {
             var soundSet = results.rows[0].sound_set;
-            var sndBg = new Audio("sound/bensound-littleidea.mp3");
+            var sndBg = document.getElementById("sndBg");
             if (soundSet === "true") {
+                sndBg.src = "sound/bensound-littleidea.mp3";
+                sndBg.loop = true;
                 sndBg.volume = 0.2;
-                sndBg.play().loop;
-            } else {
+                sndBg.play();
+            }
+            if (soundSet === "false"){
                 $$('#setSound').removeAttr("checked");
-                sndBg.current = 0;
+                sndBg.pause();
             }
         }, null);
     });

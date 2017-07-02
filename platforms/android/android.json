@@ -1,0 +1,63 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/manifest/application": [
+                        {
+                            "xml": "<activity android:configChanges=\"keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize\" android:name=\"com.google.android.gms.ads.AdActivity\" android:theme=\"@android:style/Theme.Translucent\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"AdMob\"><param name=\"android-package\" value=\"com.cupertino.cordova.plugin.AdMob\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-admob-sdklibs": {
+            "PACKAGE_NAME": "com.phonegap.moneyClicker"
+        },
+        "cordova-plugin-admob-simple": {
+            "PACKAGE_NAME": "com.phonegap.moneyClicker"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "id": "cordova-plugin-admob-simple.AdMob",
+            "file": "plugins/cordova-plugin-admob-simple/www/AdMob.js",
+            "pluginId": "cordova-plugin-admob-simple",
+            "clobbers": [
+                "window.plugins.AdMob"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-admob-sdklibs": "2.1.4",
+        "cordova-plugin-admob-simple": "3.3.4"
+    }
+}

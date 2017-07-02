@@ -75,6 +75,14 @@ module.exports = [
         "clobbers": [
             "window.connectivity"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-admob-simple/www/AdMob.js",
+        "id": "cordova-plugin-admob-simple.AdMob",
+        "pluginId": "cordova-plugin-admob-simple",
+        "clobbers": [
+            "window.plugins.AdMob"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -89,7 +97,9 @@ module.exports.metadata =
     "admob": "5.5.0",
     "com.admob.plugin": "5.5.0",
     "cordova-admob": "4.1.16",
-    "cordova-connectivity-monitor": "1.2.2"
+    "cordova-connectivity-monitor": "1.2.2",
+    "cordova-plugin-admob-simple": "3.3.4",
+    "cordova-admob-sdklibs": "2.1.4"
 }
 // BOTTOM OF METADATA
 });
