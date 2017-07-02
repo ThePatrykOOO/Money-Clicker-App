@@ -82,7 +82,7 @@
     "cordova-plugin-admob-simple": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-admob-simple"
+            "id": "cordova-plugin-admob-simple@~3.3.4"
         },
         "is_top_level": true,
         "variables": {}
