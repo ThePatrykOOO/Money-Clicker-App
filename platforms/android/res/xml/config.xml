@@ -21,4 +21,8 @@
         <param name="android-package" value="com.cupertino.cordova.plugin.AdMob" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="AdMob">
+        <param name="android-package" value="com.rjfun.cordova.admob.AdMobPlugin" />
+        <param name="onload" value="true" />
+    </feature>
 </widget>

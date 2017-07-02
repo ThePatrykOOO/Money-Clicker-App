@@ -33,6 +33,9 @@
         },
         "cordova-plugin-admob-simple": {
             "PACKAGE_NAME": "com.phonegap.moneyClicker"
+        },
+        "cordova-plugin-admobpro": {
+            "PACKAGE_NAME": "com.phonegap.moneyClicker"
         }
     },
     "dependent_plugins": {
@@ -43,6 +46,9 @@
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
         "cordova-admob-sdklibs": {
+            "PACKAGE_NAME": "com.phonegap.moneyClicker"
+        },
+        "cordova-plugin-extension": {
             "PACKAGE_NAME": "com.phonegap.moneyClicker"
         }
     }
